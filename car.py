@@ -1,3 +1,7 @@
+'''
+You can test your code manually at the bottom of a file
+'''
+
 class Car: # Creating car class
   '''
   Car object that simulates a car in code!
@@ -84,10 +88,16 @@ class Car: # Creating car class
     # Add an assert car is on here! Has form, above too: assert <expression>, "message"
     pass
   
-  def braking_deacceleration(self, deacceleration, time):
+  def braking_deceleration(self, deceleration, time):
     '''Implement this function, see README.md'''
     pass
 
 if __name__ == "__main__":
+  '''
+  You can test your code manually down here!
+  
+  Click the run button to run the code below.
+
+  '''
   temp_car = Car("Tesla", "Sedan", 'EV')
   pass

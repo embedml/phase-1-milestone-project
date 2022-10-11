@@ -14,11 +14,11 @@ def test_get_car_type():
     temp_car = Car(car_type, "body", "motor",)
     assert temp_car.get_car_type() == car_type
 
-def test_get_car_body():
+def test_get_body_type():
     letters = string.ascii_letters
     car_body = ''.join(random.choice(letters) for i in range(10))
     temp_car = Car("type", car_body, "motor")
-    assert temp_car.get_car_body() == car_body
+    assert temp_car.get_body_type() == car_body
 
 def test_get_motor_type():
     letters = string.ascii_letters

@@ -229,7 +229,7 @@ As mentioned before our car only worries about updating values *after* they happ
 
 Here are the two equations we will use. 
 
-final_distance = acceleration**2 * time + initial_velocity + initial_distance
+final_distance = 0.5 * acceleration * time**2 + initial_velocity * time + initial_distance
 Note: **2 means ^2 or squared in python
 
 final_velocity = acceleration * time + initial_velocity
@@ -251,8 +251,6 @@ One scenario we need to consider is when the starting velocity is negative. If o
 
 Since the `accelerate_forward()` function has the name forward in it. We will assume if the user passes in an negative value, then made a mistake. Instead of throwing an error we would rather have the car accelerate forward with that value.
 
-Due to the nature of squaring the acceleration that part you should not have to change. However, passing in a negative value to calculate velocity might get unintended results.
-
 If the acceleration passed in is negative make it positive before making calculations. 
 
 Hint: Use the built-in `abs()` function to get the absolute value of a number! It can be called by itself like the `print()` function. 
@@ -268,7 +266,7 @@ The distance we are tracking is absolute distance. If we reverse, the distance a
 
 You can use the equation below:
 
-final_distance = -(acceleration**2) * time + initial_velocity + initial_distance
+final_distance = -acceleration * time**2 + initial_velocity * time + initial_distance
 
 Note that the final distance must be made positive, so you will need to edit this equation. 
 

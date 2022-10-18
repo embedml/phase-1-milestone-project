@@ -203,13 +203,13 @@ If the car turned on then the function `start_car()` should return `True`, if no
 When the car is on, we want to be able to turn it off with `turn_off_car()`. We also want to know if the car was turned off or not based on the return of a `True` or `False`. 
 
 ### `test_check_distance`
-When a car is first created, it should start with zeros miles. Implement the `check_distance()` method to return the car's distance value.
+When a car is first created, it should start with zeros miles. Go back to the `__init__()` function and add an attribute called `distance` initialized to 0. Implement the `check_distance()` method to return the car's distance value.
 
 ### `test_check_velocity`
-Before we start our car, we need to check to make sure the car is not moving! In order to do that we need to check the car's velocity. Implement `check_velocity()` to return the car's velocity.   
+Before we start our car, we need to check to make sure the car is not moving! In order to do that we need to check the car's velocity. Go back to the `__init__()` function and add an attribute called `velocity` initialized to 0  Implement `check_velocity()` to return the car's velocity.   
 
 ### `test_cannot_turn_off_car_when_moving`
-Now are going to combine the two previous tests. We want to make sure the car cannot turn off while the car is moving. The car can only turn off if the velocity is zero. Update the `turn_off_car()` method with this functionalitiy. 
+Now are going to combine the two previous tests. We want to make sure the car cannot turn off while the car is moving. The car can only turn off if the velocity is zero. Update the `turn_off_car()` method with this functionality. 
 
 ### `test_turn_right`
 Since this is a simulated car, we will be simulating the movement of the car after it as already happened. We care about the end results of the car. So if we turn the car 90 degrees right, we want to update the car's angle to 90 degrees immediately. This can be thought of rotating the car's wheel when it is not moving. Later when we start moving, we will rotate the wheels as we send a move command. For this function create an attribute called `end_steering_angle`. When we turn right it will be denoted as a positive turn. If we turn the wheel 20 degrees right then 40 degree right, we expect the wheel to be turned a total of 60 degrees. We also cannot turn a negative degrees, so if a negative degrees is passed we need to throw an error. 
@@ -220,6 +220,7 @@ Hint: Use `assert <expression>` to throw an error!
 Turning left is like turing right, except we denote left turns with negative degrees internal to our class. However the user should still only put in positive degrees. If the user puts in a negative degrees an error should be raised. 
 
 ### `test_get_end_steering_angle`
+Go back to the `__init__()` function and add an attribute called `end_steering_angle` initialized to 0.
 Implement `get_end_steering()`, where it will return the car's `end_steering_angle`
 
 ### `test_forward_acceleration_basic`

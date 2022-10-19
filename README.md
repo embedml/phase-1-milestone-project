@@ -176,7 +176,7 @@ Now try running the test again, as mentioned before in **Welcome to the Mileston
 
 ### `test_get_car_body`
 
-Next is to pass the `test_get_car_body` test. This is the same as teh `test_get_car_type` test, but this time you want to return the car's body attribute. 
+Next is to pass the `test_get_car_body` test. This is the same as the `test_get_car_type` test, but this time you want to return the car's body attribute. 
 
 ### `test_get_motor_type`
 
@@ -184,7 +184,9 @@ Try doing this test on your own! I should be very similar to the previous two te
 
 ### `test__str__()`
 
-`__str__()` is a hidden function like `__init__()`. `__str__()` is called when the `Car` object is converted to a string. Like in the `print()` call. 
+`__str__()` is a hidden function like `__init__()`.
+<br><br>
+ `__str__()` is called when the `Car` object is converted to a string. Like in the `print()` call. 
 
 Once `__str__()` expects a string to be returned. When `print(car_object)` is called it is equivelent to `print(car_object.__str__())`. `print()` does the conversion to a string internally. 
 

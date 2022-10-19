@@ -92,7 +92,8 @@ def run(car_commands):
             degrees == func_tuple[1]
             control_car.turn_left(degrees)
     time.sleep(3)
-    turtle.done()
     print(control_car.type, "traveled:", control_car.check_distance(), "units")
+    turtle.done()
+    
 
 run(car_commands)

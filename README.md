@@ -188,16 +188,16 @@ Try doing this test on your own! I should be very similar to the previous two te
 <br><br>
  `__str__()` is called when the `Car` object is converted to a string. Like in the `print()` call. 
 
-Once `__str__()` expects a string to be returned. When `print(car_object)` is called it is equivelent to `print(car_object.__str__())`. `print()` does the conversion to a string internally. 
+Once `__str__()` expects a string to be returned. When `print(car_object)` is called it is equivelent to `print(car_object.__str__())`. The `print()` function does the conversion to a string internally. 
 
-The returned string can be anything, but in this case we want it to return something like: `f"Type: {self.type}, Body: {self.body}, Motor: {self.motor}"`. 
+The returned string can be anything, but in this case we want it to return: `f"Type: {self.type}, Body: {self.body}, Motor: {self.motor}"`. 
 
 Once you have the return working, you can see it by creating and printing a car object at the bottom of the car.py file. 
 
 Now see if your test case has passed! 
 
 ### `test_start_car_basic`
-When we start our car, we want `self.isOn` to be set to `True` we also want to know if we were able to turn on the car. However if the car was already on, then we want to know that we did not turn on the car. 
+When we start our car, we want `self.isOn` to be set to `True`. We also want to know if we were able to turn on the car. However if the car was already on, then we want to know that we did not turn on the car. 
 
 If the car turned on then the function `start_car()` should return `True`, if not then the function should return `False`. 
 
@@ -213,6 +213,10 @@ Before we start our car, we need to check to make sure the car is not moving! In
 ### `test_cannot_turn_off_car_when_moving`
 Now are going to combine the two previous tests. We want to make sure the car cannot turn off while the car is moving. The car can only turn off if the velocity is zero. Update the `turn_off_car()` method with this functionality. 
 
+### `test_get_end_steering_angle`
+In order to figure out the steering angle, we will keep track of it with a variable `end_steering_angle`. Go back to the `__init__()` function and add an attribute called `end_steering_angle` initialized to 0.
+Implement `get_end_steering()`, where it will return the car's `end_steering_angle`
+
 ### `test_turn_right`
 Since this is a simulated car, we will be simulating the movement of the car after it as already happened. We care about the end results of the car. So if we turn the car 90 degrees right, we want to update the car's angle to 90 degrees immediately. This can be thought of rotating the car's wheel when it is not moving. Later when we start moving, we will rotate the wheels as we send a move command. For this function create an attribute called `end_steering_angle`. When we turn right it will be denoted as a positive turn. If we turn the wheel 20 degrees right then 40 degree right, we expect the wheel to be turned a total of 60 degrees. We also cannot turn a negative degrees, so if a negative degrees is passed we need to throw an error. 
 
@@ -220,10 +224,6 @@ Hint: Use `assert <expression>` to throw an error!
 
 ### `test_turn_left`
 Turning left is like turing right, except we denote left turns with negative degrees internal to our class. However the user should still only put in positive degrees. If the user puts in a negative degrees an error should be raised. 
-
-### `test_get_end_steering_angle`
-Go back to the `__init__()` function and add an attribute called `end_steering_angle` initialized to 0.
-Implement `get_end_steering()`, where it will return the car's `end_steering_angle`
 
 ### `test_forward_acceleration_basic`
 
@@ -241,9 +241,9 @@ In the method `accelerate_forward(acceleration, time)`, update the `distance` an
 
 Velocity and distance should accumulate. If the car accelerates 4 m/s^2 for 2 seconds then 2 m/s^2 for 2 seconds it should be going 12 m/s. 
 
-Hint: User your `check_velocity()` and `check_distance()` functions to get velocity and distance! 
+Hint: Use your `check_velocity()` and `check_distance()` functions to get velocity and distance! 
 
-Also! The car has to be on to accelerate of course! If you try to accelerate before the car is one throw an error with `assert`
+Also! The car has to be on to accelerate of course! If you try to accelerate before the car is on, throw an error with `assert`
 
 ### `test_forward_acceleration_basic_neg_velocity`
 

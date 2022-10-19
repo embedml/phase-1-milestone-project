@@ -96,6 +96,7 @@ class Car: # Creating car class
   
   def accelerate_forward(self, acceleration, time):
     '''Implement this function, see README.md'''
+    # Add an assert car is on here! Has form, above too: assert <expression>, "message"
     pass
   
   def accelerate_reverse(self, acceleration, time):

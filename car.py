@@ -35,6 +35,8 @@ class Car: # Creating car class
     Checks if the car is started, 
     if is on, tells user it is on
     if not then starts car
+
+    Fix this function! 
     '''
     if self.isOn:
       print("Car is already on!")
@@ -49,6 +51,8 @@ class Car: # Creating car class
     Checks if the car is started, 
     if is on, tells user it is on
     if not then starts car
+
+    Fix this function!
     '''   
     if self.isOn:
       print("Turning car off")
@@ -68,7 +72,18 @@ class Car: # Creating car class
 
   def turn_right(self, degrees):
     '''Implement this function, see README.md'''
-    assert degrees >=0, "Degrees must be positive"
+    assert degrees >=0, "Degrees must be positive" 
+    '''
+    Note: assert statement look at the expression and 
+    crash the program if the expression evaluates to false.
+    
+    The syntax is `assert <some expression>`. 
+
+    Here we want to crash the program if the user passed in 
+    a negative value for degree, so we are asserting the 
+    input argument degrees is greater than 0.
+
+    '''
     pass
 
   def turn_left(self, degrees):
